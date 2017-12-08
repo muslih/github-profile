@@ -1,0 +1,24 @@
+{
+  "name": "view-github",
+  "version": "1.0.0",
+  "description": "View your github profile summary",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDepedencies": {
+    "babel-core": "7.1.2",
+    "babel-loader": "7.1.2",
+    "webpack": "1.12.*"
+  },
+  "depedencies": {
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  },
+  "author": "Muslih",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2"
+  }
+}
