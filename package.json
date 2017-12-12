@@ -11,11 +11,13 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
-    "webpack": "3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-dev-middleware": "^1.12.2",
+    "webpack-dev-server": "^2.9.7",
+    "webpack-hot-middleware": "^2.21.0"
   },
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   }
 }
-
