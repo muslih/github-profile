@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types'; 
+import Profile from './github/Profile.jsx';
 
 class App extends Component{
   constructor(props){
@@ -13,10 +14,31 @@ class App extends Component{
     }
   }
 
+  // get user data from github
+  getUserData(){
+    $.ajax({
+      url: 'https://api.github.com/users/'+this.state.username+'?client_id='+this.props.clientId+'&client_secret='+this.props.clientSecret,
+      dataType: 'json',
+      cache: false,
+      success: function(data){
+        this.setState({userData: data});
+        console.log(data);
+      }.bind(this),
+      error: function(xhr, status, err){
+        this.setState({username: nul});
+        alert(err)
+      }.bind(this)
+    });
+  }
+
+  componentDidMount(){
+    this.getUserData();
+  }
+
   render(){
     return(
       <div>
-        {this.props.clientSecret}
+        <Profile userData = {this.state.userData} />
       </div>
     )
   }
