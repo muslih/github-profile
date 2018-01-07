@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
+import RepoList from './RepoList.jsx'
 
 class Profile extends Component{
   render(){
@@ -34,13 +34,12 @@ class Profile extends Component{
                   </ul>
                 </div>
               </div>
-              <div className="row">
-                <div className="col-md-12">
-                  <a className="btn btn-primary" target="_blank" href={this.props.userData.html_url}>Visit Profile</a>
-                </div>
-              </div>
+              <a className="btn btn-primary" target="_blank" href={this.props.userData.html_url}>Visit Profile</a>
             </div>
           </div>
+          <hr />
+          <h3>User Repositories</h3>
+          <RepoList userRepos={this.props.userRepos} />
         </div>
       </div>
     )
