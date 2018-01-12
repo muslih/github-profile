@@ -9,3 +9,6 @@ npm install babel-core babel-loader --save-dev
 
 ### Run
 `webpack-dev-server`
+
+### Showcase
+![screen recording 2018-01-12 at 11 23 pm](https://user-images.githubusercontent.com/2532862/34884637-e38c574e-f7ef-11e7-83ec-b066eba5673b.gif)
