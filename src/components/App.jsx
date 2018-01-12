@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types'; 
 import Profile from './github/Profile.jsx';
+import Search from './github/Search.jsx';
 
 class App extends Component{
   constructor(props){
@@ -39,13 +40,21 @@ class App extends Component{
       cache: false,
       success: function(data){
         this.setState({userRepos: data});
-        console.log(data);
+        
       }.bind(this),
       error: function(xhr, status, err){
+        alert(err);
         this.setState({username: nul});
-        alert(err)
       }.bind(this)
     });
+  }
+
+  handleSubmit(username){
+    this.setState({username: username}, function(){
+      this.getUserData();
+      this.getUserRepos();
+    })
+    
   }
 
   componentDidMount(){
@@ -56,6 +65,7 @@ class App extends Component{
   render(){
     return(
       <div>
+        <Search onSubmit = {this.handleSubmit.bind(this)} />
         <Profile {...this.state} />
       </div>
     )
