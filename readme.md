@@ -9,7 +9,8 @@ npm install webpack-dev-server -g
 Clone this repo and run `npm install`
 
 ### Run
-To run the app type`webpack-dev-server`
+To run the app type`npm run dev`
 
 ### Showcase
+<a href="http://muslih.me/github-profile/">Click to see demo</a>
 ![screen recording 2018-01-12 at 11 23 pm](https://user-images.githubusercontent.com/2532862/34884637-e38c574e-f7ef-11e7-83ec-b066eba5673b.gif)
