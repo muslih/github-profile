@@ -1,6 +1,7 @@
-# Githup Profile Viewer
+# Github Profile Viewer
 ### Requirements
 ```javascript
+npm install webpack -g
 npm install webpack-dev-server -g
 ```
 

@@ -6,6 +6,9 @@ module.exports = {
     path: __dirname,
     filename: 'app/js/main.js' 
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   module: {
     loaders: [
       {
@@ -14,7 +17,7 @@ module.exports = {
         exclude: /node_modules/,
         query:
           {
-            presets:['react']
+            presets:['react', 'es2015']
           }
       }
     ]
